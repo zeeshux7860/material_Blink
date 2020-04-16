@@ -68,52 +68,52 @@ extension StfulStless on Widget {
 }
 
 extension Components on String {
-
   Widget mxFlatButton({
     bool autofocus = false,
     Clip clipBehavior = Clip.none,
     Color color,
-  Brightness colorBrightness,
-Color disabledColor,
-Color disabledTextColor,
-Color focusColor,
-FocusNode focusNode,
-Color highlightColor,
-Color hoverColor,
-Key key,
-MaterialTapTargetSize materialTapTargetSize,
-void Function(bool) onHighlightChanged,
-void Function() onLongPress,
-EdgeInsetsGeometry padding,
-ShapeBorder shape,
-Color splashColor,
-Color textColor,
-ButtonTextTheme textTheme,
-
-  }){
-    return FlatButton(onPressed: (){},
-     child: Textmaterial(text: this),
-     autofocus: autofocus,
-     clipBehavior: clipBehavior,
-     color: color,
-     colorBrightness: colorBrightness,
-     disabledColor: disabledColor,
-     disabledTextColor: disabledTextColor,
-     focusColor: focusColor,
-     focusNode: focusNode,
-     highlightColor: highlightColor,
-     hoverColor: hoverColor,
-     key: key,
-     materialTapTargetSize: materialTapTargetSize,
-     onHighlightChanged: onHighlightChanged,
-     onLongPress: onLongPress,
-     padding: padding,
-     shape: shape,
-     splashColor: splashColor,
-     textColor: textColor,
-     textTheme: textTheme,
-     );
+    Brightness colorBrightness,
+    Color disabledColor,
+    Color disabledTextColor,
+    Color focusColor,
+    FocusNode focusNode,
+    Color highlightColor,
+    Color hoverColor,
+    Key key,
+    MaterialTapTargetSize materialTapTargetSize,
+    void Function(bool) onHighlightChanged,
+    void Function() onLongPress,
+    EdgeInsetsGeometry padding,
+    ShapeBorder shape,
+    Color splashColor,
+    Color textColor,
+    ButtonTextTheme textTheme,
+  }) {
+    return FlatButton(
+      onPressed: () {},
+      child: Textmaterial(text: this),
+      autofocus: autofocus,
+      clipBehavior: clipBehavior,
+      color: color,
+      colorBrightness: colorBrightness,
+      disabledColor: disabledColor,
+      disabledTextColor: disabledTextColor,
+      focusColor: focusColor,
+      focusNode: focusNode,
+      highlightColor: highlightColor,
+      hoverColor: hoverColor,
+      key: key,
+      materialTapTargetSize: materialTapTargetSize,
+      onHighlightChanged: onHighlightChanged,
+      onLongPress: onLongPress,
+      padding: padding,
+      shape: shape,
+      splashColor: splashColor,
+      textColor: textColor,
+      textTheme: textTheme,
+    );
   }
+
   Widget h1TextBold(
       {Color color = Colors.white, FontWeight fontWeight = FontWeight.bold}) {
     return H1(
@@ -168,13 +168,12 @@ ButtonTextTheme textTheme,
     );
   }
 
-  Widget floationActiobButton(
+  Widget mxFloationActiobButton(
       {Color color,
       String fontFamily,
       FontWeight fontWeight,
       double fontsize,
       Function onTap}) {
-   
     return FloatingActionButton(
       onPressed: onTap,
       child: Textmaterial(
@@ -801,6 +800,62 @@ extension ComponentsIconData on IconData {
       size: size,
       color: color,
     );
+  }
+
+  Widget mxFloationActiobButton(
+      {bool autofocus = false,
+      Clip clipBehavior = Clip.none,
+      Color color,
+      Brightness colorBrightness,
+      Color focusColor,
+      FocusNode focusNode,
+      Color highlightColor,
+      Color hoverColor,
+      Key key,
+      MaterialTapTargetSize materialTapTargetSize,
+      void Function(bool) onHighlightChanged,
+      void Function() onLongPress,
+      EdgeInsetsGeometry padding,
+      ShapeBorder shape,
+      Color splashColor,
+      Color textColor,
+      ButtonTextTheme textTheme,
+      double disabledElevation,
+      double elevation,
+      double focusElevation,
+      Color foregroundColor,
+      Object heroTag,
+      double highlightElevation,
+      String tooltip,
+      bool isExtended = false,
+      bool mini = false,
+      double hoverElevation,
+      Function onTap}) {
+    return FloatingActionButton(
+     autofocus: autofocus,
+      clipBehavior: clipBehavior,
+      backgroundColor: color,
+      onPressed: onTap,
+      focusColor: focusColor,
+      focusNode: focusNode,
+      hoverColor: hoverColor,
+      key: key,
+      materialTapTargetSize: materialTapTargetSize,
+    disabledElevation: disabledElevation,
+    elevation: elevation,
+    focusElevation: focusElevation,
+    foregroundColor: foregroundColor,
+    heroTag: heroTag,
+    highlightElevation: highlightElevation,
+    hoverElevation: hoverElevation,
+    isExtended: isExtended,
+    mini: mini,
+    tooltip: tooltip,
+      shape: shape,
+      splashColor: splashColor,
+        child: Icon(
+          this,
+        ));
   }
 
   Widget mxListTileIcon(
