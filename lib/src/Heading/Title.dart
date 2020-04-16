@@ -17,13 +17,14 @@ class MxHeader extends StatelessWidget {
     this.offset = const Offset(0, 8),
     this.spreadRadius = 0.5,
     this.shadowColor = Colors.black,
-    this.color =  Colors.white,
-    this.child, this.onTap,
+    this.color = Colors.white,
+    this.child,
+    this.onTap,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MxContainer(
-      onTap: onTap,
+        onTap: onTap,
         rounded: rounded,
         blurRadius: blurRadius,
         offset: offset,

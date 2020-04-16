@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_blink/material_blink.dart';
 
-
 class MxCardBanner extends StatelessWidget {
   final Function onTap;
   final Color color;
@@ -28,7 +27,8 @@ class MxCardBanner extends StatelessWidget {
       this.spreadRadius,
       this.width,
       this.rightSideChild,
-      this.margin, this.button})
+      this.margin,
+      this.button})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -46,14 +46,14 @@ class MxCardBanner extends StatelessWidget {
             ? MainAxisAlignment.start
             : MainAxisAlignment.spaceAround,
         children: <Widget>[
-            Flexible(
+          Flexible(
             child: new Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-               title == null ? Container() : title,
+                title == null ? Container() : title,
                 5.0.sizedHeight(),
-               subTitle == null ? new Container() :subTitle,
+                subTitle == null ? new Container() : subTitle,
                 10.0.sizedHeight(),
                 button == null ? new Container() : button
               ],

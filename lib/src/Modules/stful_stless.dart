@@ -68,104 +68,96 @@ extension StfulStless on Widget {
 }
 
 extension Components on String {
-
-Widget h1TextBold({
-  Color color = Colors.white,
-  FontWeight fontWeight = FontWeight.bold
-}){
-  return H1(
-    text: this,
-    fontWeight: FontWeight.bold,
-    color: color,
-  );
-}
-Widget h2TextBold({
-  Color color = Colors.white,
-  FontWeight fontWeight = FontWeight.bold
-}){
-  return H2(
-    text: this,
-    fontWeight: FontWeight.bold,
-    color: color,
-  );
-}
-
-Widget h3TextBold({
-  Color color = Colors.white,
-  FontWeight fontWeight = FontWeight.bold
-}){
-  return H3(
-    text: this,
-    fontWeight: FontWeight.bold,
-    color: color,
-  );
-}
-
-Widget h4TextBold({
-  Color color = Colors.white,
-  FontWeight fontWeight = FontWeight.bold
-}){
-  return H4(
-    text: this,
-    fontWeight: FontWeight.bold,
-    color: color,
-  );
-}
-
-Widget h5TextBold({
-  Color color = Colors.white,
-  FontWeight fontWeight = FontWeight.bold
-}){
-  return H5(
-    text: this,
-    fontWeight: FontWeight.bold,
-    color: color,
-  );
-}
-Widget h6TextBold({
-  Color color = Colors.white,
-  FontWeight fontWeight = FontWeight.bold
-}){
-  return H6(
-    text: this,
-    fontWeight: FontWeight.bold,
-    color: color,
-  );
-}
-
-Widget floationActiobButton({
-  Color color,
-  String fontFamily,
-  FontWeight fontWeight,
-  double fontsize,
-  Function onTap
-}){
-  void nPress(){
-    print("object");
+  Widget h1TextBold(
+      {Color color = Colors.white, FontWeight fontWeight = FontWeight.bold}) {
+    return H1(
+      text: this,
+      fontWeight: FontWeight.bold,
+      color: color,
+    );
   }
-  return FloatingActionButton(onPressed: onTap,
-  child: Textmaterial(text: this,
-  color: color,
-  fontFamily: fontFamily,
-  fontWeight: fontWeight,
-  fontsize: fontsize,
-  ),
-  );
-}
-  Widget cardBannerButton({
-   Color buttonColor = Colors.red,
-   double buttonWidth = 150,
-   double buttonHeight = 30,
-  Function onTap
-  }){
+
+  Widget h2TextBold(
+      {Color color = Colors.white, FontWeight fontWeight = FontWeight.bold}) {
+    return H2(
+      text: this,
+      fontWeight: FontWeight.bold,
+      color: color,
+    );
+  }
+
+  Widget h3TextBold(
+      {Color color = Colors.white, FontWeight fontWeight = FontWeight.bold}) {
+    return H3(
+      text: this,
+      fontWeight: FontWeight.bold,
+      color: color,
+    );
+  }
+
+  Widget h4TextBold(
+      {Color color = Colors.white, FontWeight fontWeight = FontWeight.bold}) {
+    return H4(
+      text: this,
+      fontWeight: FontWeight.bold,
+      color: color,
+    );
+  }
+
+  Widget h5TextBold(
+      {Color color = Colors.white, FontWeight fontWeight = FontWeight.bold}) {
+    return H5(
+      text: this,
+      fontWeight: FontWeight.bold,
+      color: color,
+    );
+  }
+
+  Widget h6TextBold(
+      {Color color = Colors.white, FontWeight fontWeight = FontWeight.bold}) {
+    return H6(
+      text: this,
+      fontWeight: FontWeight.bold,
+      color: color,
+    );
+  }
+
+  Widget floationActiobButton(
+      {Color color,
+      String fontFamily,
+      FontWeight fontWeight,
+      double fontsize,
+      Function onTap}) {
+    void nPress() {
+      print("object");
+    }
+
+    return FloatingActionButton(
+      onPressed: onTap,
+      child: Textmaterial(
+        text: this,
+        color: color,
+        fontFamily: fontFamily,
+        fontWeight: fontWeight,
+        fontsize: fontsize,
+      ),
+    );
+  }
+
+  Widget cardBannerButton(
+      {Color buttonColor = Colors.red,
+      double buttonWidth = 150,
+      double buttonHeight = 30,
+      Function onTap}) {
     return new MaterialXButton(
-                color: buttonColor,
-                width: buttonWidth,
-                height: buttonHeight,
-                text: this,
-                onTap: onTap,
-              );
+      color: buttonColor,
+      width: buttonWidth,
+      height: buttonHeight,
+      text: this,
+      onTap: onTap,
+    );
   }
+
   DecorationImage decorationimageToCover(
       {AlignmentGeometry alignment = Alignment.center,
       Rect centerSlice,
@@ -179,7 +171,7 @@ Widget floationActiobButton({
         colorFilter: colorFilter,
         matchTextDirection: matchTextDirection,
         repeat: repeat,
-        fit:fit,
+        fit: fit,
         image: NetworkImage(this));
   }
 
@@ -196,10 +188,11 @@ Widget floationActiobButton({
         colorFilter: colorFilter,
         matchTextDirection: matchTextDirection,
         repeat: repeat,
-        fit:fit,
+        fit: fit,
         image: NetworkImage(this));
   }
-    DecorationImage decorationimageToFill(
+
+  DecorationImage decorationimageToFill(
       {AlignmentGeometry alignment = Alignment.center,
       Rect centerSlice,
       ColorFilter colorFilter,
@@ -212,11 +205,10 @@ Widget floationActiobButton({
         colorFilter: colorFilter,
         matchTextDirection: matchTextDirection,
         repeat: repeat,
-        fit:fit,
+        fit: fit,
         image: NetworkImage(this));
   }
 
- 
   DecorationImage decorationimageToNone(
       {AlignmentGeometry alignment = Alignment.center,
       Rect centerSlice,
@@ -230,9 +222,10 @@ Widget floationActiobButton({
         colorFilter: colorFilter,
         matchTextDirection: matchTextDirection,
         repeat: repeat,
-        fit:fit,
+        fit: fit,
         image: NetworkImage(this));
-  } 
+  }
+
   DecorationImage decorationimageToScaleDown(
       {AlignmentGeometry alignment = Alignment.center,
       Rect centerSlice,
@@ -246,11 +239,11 @@ Widget floationActiobButton({
         colorFilter: colorFilter,
         matchTextDirection: matchTextDirection,
         repeat: repeat,
-        fit:fit,
+        fit: fit,
         image: NetworkImage(this));
   }
 
- DecorationImage decorationimageToFitHeight(
+  DecorationImage decorationimageToFitHeight(
       {AlignmentGeometry alignment = Alignment.center,
       Rect centerSlice,
       ColorFilter colorFilter,
@@ -263,10 +256,11 @@ Widget floationActiobButton({
         colorFilter: colorFilter,
         matchTextDirection: matchTextDirection,
         repeat: repeat,
-        fit:fit,
+        fit: fit,
         image: NetworkImage(this));
   }
-   DecorationImage decorationimageToFitWidth(
+
+  DecorationImage decorationimageToFitWidth(
       {AlignmentGeometry alignment = Alignment.center,
       Rect centerSlice,
       ColorFilter colorFilter,
@@ -279,10 +273,9 @@ Widget floationActiobButton({
         colorFilter: colorFilter,
         matchTextDirection: matchTextDirection,
         repeat: repeat,
-        fit:fit,
+        fit: fit,
         image: NetworkImage(this));
   }
-
 
   Widget mxCircleNetWorkImage({
     Color backgroundColor,

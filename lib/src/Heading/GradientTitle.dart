@@ -23,12 +23,13 @@ class MxHeaderGradient extends StatelessWidget {
       colors: [Colors.red, Colors.pink], // whitish to gray
       tileMode: TileMode.mirror, // repeats the gradient over the canvas
     ),
-    this.child, this.onTap,
+    this.child,
+    this.onTap,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MxContainerGradient(
-      onTap: onTap,
+        onTap: onTap,
         rounded: rounded,
         blurRadius: blurRadius,
         offset: offset,

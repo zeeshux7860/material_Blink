@@ -26,7 +26,6 @@ class MxGradientCardBanner extends StatelessWidget {
       this.blurRadius,
       this.spreadRadius,
       this.width,
-
       this.rightSideChild,
       this.margin,
       this.button})
@@ -52,9 +51,9 @@ class MxGradientCardBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-               title == null ? Container() : title,
+                title == null ? Container() : title,
                 5.0.sizedHeight(),
-               subTitle == null ? new Container() :subTitle,
+                subTitle == null ? new Container() : subTitle,
                 10.0.sizedHeight(),
                 button == null ? new Container() : button
               ],
