@@ -1,7 +1,8 @@
 import 'dart:collection';
 import 'package:material_blink/src/convert/json_to_dart.dart';
- main() async {
- var res = await dartGenerate("name","""{
+
+main() async {
+  var res = await dartGenerate("name", """{
     "glossary": {
         "title": "example glossary",
 		"GlossDiv": {
@@ -24,6 +25,5 @@ import 'package:material_blink/src/convert/json_to_dart.dart';
     }
 }""");
 
-print(res.code);
+  print(res.code);
 }
-

@@ -4,7 +4,6 @@ import 'package:json_ast/json_ast.dart'
     show Node, ObjectNode, ArrayNode, LiteralNode;
 import 'package:material_blink/src/convert/syntax.dart';
 
-
 const Map<String, bool> PRIMITIVE_TYPES = const {
   'int': true,
   'double': true,

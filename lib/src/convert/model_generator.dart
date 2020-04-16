@@ -1,5 +1,3 @@
-
-
 import 'dart:collection';
 
 import 'package:dart_style/dart_style.dart';

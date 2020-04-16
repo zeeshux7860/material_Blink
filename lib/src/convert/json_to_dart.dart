@@ -1,4 +1,3 @@
-
 import 'dart:collection';
 import 'dart:convert' as Convert;
 import 'dart:math';
@@ -6,16 +5,14 @@ import 'package:json_ast/json_ast.dart'
     show ArrayNode, LiteralNode, Node, ObjectNode, Settings, parse;
 
 import 'package:dart_style/dart_style.dart';
- dartGenerate(String name, String value ) async{
+
+dartGenerate(String name, String value) async {
   final createGenerator = new ModelGenerator(name);
-  
+
   DartCode darcode = createGenerator.generateDartClasses(value);
- 
+
   return darcode;
 }
-
-
-
 
 const Map<String, bool> PRIMITIVE_TYPES = const {
   'int': true,
@@ -617,8 +614,6 @@ class ClassDefinition {
     }
   }
 }
-
-
 
 class DartCode extends WithWarning<String> {
   DartCode(String result, List<Warning> warnings) : super(result, warnings);
