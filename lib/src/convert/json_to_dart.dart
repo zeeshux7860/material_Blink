@@ -10,7 +10,7 @@ import 'package:dart_style/dart_style.dart';
   final createGenerator = new ModelGenerator(name);
   
   DartCode darcode = createGenerator.generateDartClasses(value);
-  print(darcode.code);
+ 
   return darcode;
 }
 
