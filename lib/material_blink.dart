@@ -39,3 +39,4 @@ export 'src/Heading/GradientTitle.dart';
 export 'src/Heading/heading.dart';
 export 'src/Heading/Title.dart';
 export 'src/Modules/ImageBlue.dart';
+export 'src/convert/json_to_dart.dart';
