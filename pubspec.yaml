@@ -1,8 +1,7 @@
 name: material_blink
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/zeeshux7860/material_Blink
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
