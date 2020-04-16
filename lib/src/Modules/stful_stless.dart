@@ -68,6 +68,52 @@ extension StfulStless on Widget {
 }
 
 extension Components on String {
+
+  Widget mxFlatButton({
+    bool autofocus = false,
+    Clip clipBehavior = Clip.none,
+    Color color,
+  Brightness colorBrightness,
+Color disabledColor,
+Color disabledTextColor,
+Color focusColor,
+FocusNode focusNode,
+Color highlightColor,
+Color hoverColor,
+Key key,
+MaterialTapTargetSize materialTapTargetSize,
+void Function(bool) onHighlightChanged,
+void Function() onLongPress,
+EdgeInsetsGeometry padding,
+ShapeBorder shape,
+Color splashColor,
+Color textColor,
+ButtonTextTheme textTheme,
+
+  }){
+    return FlatButton(onPressed: (){},
+     child: Textmaterial(text: this),
+     autofocus: autofocus,
+     clipBehavior: clipBehavior,
+     color: color,
+     colorBrightness: colorBrightness,
+     disabledColor: disabledColor,
+     disabledTextColor: disabledTextColor,
+     focusColor: focusColor,
+     focusNode: focusNode,
+     highlightColor: highlightColor,
+     hoverColor: hoverColor,
+     key: key,
+     materialTapTargetSize: materialTapTargetSize,
+     onHighlightChanged: onHighlightChanged,
+     onLongPress: onLongPress,
+     padding: padding,
+     shape: shape,
+     splashColor: splashColor,
+     textColor: textColor,
+     textTheme: textTheme,
+     );
+  }
   Widget h1TextBold(
       {Color color = Colors.white, FontWeight fontWeight = FontWeight.bold}) {
     return H1(
