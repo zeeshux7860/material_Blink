@@ -1,4 +1,3 @@
-
 import 'package:material_blink/src/convert/json_to_dart.dart';
 
 main() async {
