@@ -128,10 +128,7 @@ extension Components on String {
       FontWeight fontWeight,
       double fontsize,
       Function onTap}) {
-    void nPress() {
-      print("object");
-    }
-
+   
     return FloatingActionButton(
       onPressed: onTap,
       child: Textmaterial(
