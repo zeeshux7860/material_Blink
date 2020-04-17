@@ -5,12 +5,8 @@ import 'package:material_blink/src/Modules/MxAnimationType.dart';
 import 'package:material_blink/src/Modules/animation/animation_do.dart';
 
 extension MxWidget on Widget {
-  Widget mxFlexable({FlexFit fit = FlexFit.loose,int flex = 1,Key key}) {
-    return Flexible(
-      fit: fit,
-      flex: flex,
-      key: key,
-      child: this);
+  Widget mxFlexable({FlexFit fit = FlexFit.loose, int flex = 1, Key key}) {
+    return Flexible(fit: fit, flex: flex, key: key, child: this);
   }
 
   /// ------------------------------------------------------------------------ Single ChildScroll view NeverScrollableScrollPhysics

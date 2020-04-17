@@ -31,7 +31,7 @@ extension StfulStless on Widget {
     bool checkerboardRasterCacheImages = false,
     bool checkerboardOffscreenLayers = false,
     bool showSemanticsDebugger = false,
-    bool debugShowCheckedModeBanner = true,
+    bool debugShowCheckedModeBanner = false,
   }) {
     return MaterialApp(
       home: this,
@@ -116,6 +116,60 @@ extension StfulStless on Widget {
         shape: shape,
         splashColor: splashColor,
         child: this);
+  }
+
+  Widget mxtbp({double t, double b}) {
+    return Padding(padding: EdgeInsets.only(top: t, bottom: b));
+  }
+
+  Widget mxltp({double l, double t}) {
+    return Padding(padding: EdgeInsets.only(top: t, left: l));
+  }
+    Widget mxrtp({double r, double t}) {
+    return Padding(padding: EdgeInsets.only(top: t, right: r));
+  }
+
+  Widget mxlbp({double l, double b}) {
+    return Padding(padding: EdgeInsets.only(left: l, bottom: b));
+  }
+    Widget mxlrp({double l, double r}) {
+    return Padding(padding: EdgeInsets.only(left: l, right: r));
+  }
+    Widget mxrbp({double r, double b}) {
+    return Padding(padding: EdgeInsets.only(right: r, bottom: b));
+  }
+   
+ 
+}
+
+extension Paddings on double {
+  Widget mxap() {
+    return Padding(padding: EdgeInsets.all(this));
+  }
+
+  Widget mxlp() {
+    return Padding(padding: EdgeInsets.only(left: this));
+  }
+
+  Widget mxrp() {
+    return Padding(
+        padding: EdgeInsets.only(
+      right: this,
+    ));
+  }
+
+  Widget mxtp() {
+    return Padding(
+        padding: EdgeInsets.only(
+      top: this,
+    ));
+  }
+
+  Widget mxbp() {
+    return Padding(
+        padding: EdgeInsets.only(
+      bottom: this,
+    ));
   }
 }
 
