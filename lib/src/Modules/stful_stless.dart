@@ -125,21 +125,22 @@ extension StfulStless on Widget {
   Widget mxltp({double l, double t}) {
     return Padding(padding: EdgeInsets.only(top: t, left: l));
   }
-    Widget mxrtp({double r, double t}) {
+
+  Widget mxrtp({double r, double t}) {
     return Padding(padding: EdgeInsets.only(top: t, right: r));
   }
 
   Widget mxlbp({double l, double b}) {
     return Padding(padding: EdgeInsets.only(left: l, bottom: b));
   }
-    Widget mxlrp({double l, double r}) {
+
+  Widget mxlrp({double l, double r}) {
     return Padding(padding: EdgeInsets.only(left: l, right: r));
   }
-    Widget mxrbp({double r, double b}) {
+
+  Widget mxrbp({double r, double b}) {
     return Padding(padding: EdgeInsets.only(right: r, bottom: b));
   }
-   
- 
 }
 
 extension Paddings on double {
@@ -350,125 +351,6 @@ extension Components on String {
       text: this,
       onTap: onTap,
     );
-  }
-
-  DecorationImage decorationimageToCover(
-      {AlignmentGeometry alignment = Alignment.center,
-      Rect centerSlice,
-      ColorFilter colorFilter,
-      bool matchTextDirection = false,
-      BoxFit fit = BoxFit.cover,
-      ImageRepeat repeat = ImageRepeat.noRepeat}) {
-    return DecorationImage(
-        alignment: alignment,
-        centerSlice: centerSlice,
-        colorFilter: colorFilter,
-        matchTextDirection: matchTextDirection,
-        repeat: repeat,
-        fit: fit,
-        image: NetworkImage(this));
-  }
-
-  DecorationImage decorationimageToContain(
-      {AlignmentGeometry alignment = Alignment.center,
-      Rect centerSlice,
-      ColorFilter colorFilter,
-      bool matchTextDirection = false,
-      BoxFit fit = BoxFit.contain,
-      ImageRepeat repeat = ImageRepeat.noRepeat}) {
-    return DecorationImage(
-        alignment: alignment,
-        centerSlice: centerSlice,
-        colorFilter: colorFilter,
-        matchTextDirection: matchTextDirection,
-        repeat: repeat,
-        fit: fit,
-        image: NetworkImage(this));
-  }
-
-  DecorationImage decorationimageToFill(
-      {AlignmentGeometry alignment = Alignment.center,
-      Rect centerSlice,
-      ColorFilter colorFilter,
-      bool matchTextDirection = false,
-      BoxFit fit = BoxFit.fill,
-      ImageRepeat repeat = ImageRepeat.noRepeat}) {
-    return DecorationImage(
-        alignment: alignment,
-        centerSlice: centerSlice,
-        colorFilter: colorFilter,
-        matchTextDirection: matchTextDirection,
-        repeat: repeat,
-        fit: fit,
-        image: NetworkImage(this));
-  }
-
-  DecorationImage decorationimageToNone(
-      {AlignmentGeometry alignment = Alignment.center,
-      Rect centerSlice,
-      ColorFilter colorFilter,
-      bool matchTextDirection = false,
-      BoxFit fit = BoxFit.none,
-      ImageRepeat repeat = ImageRepeat.noRepeat}) {
-    return DecorationImage(
-        alignment: alignment,
-        centerSlice: centerSlice,
-        colorFilter: colorFilter,
-        matchTextDirection: matchTextDirection,
-        repeat: repeat,
-        fit: fit,
-        image: NetworkImage(this));
-  }
-
-  DecorationImage decorationimageToScaleDown(
-      {AlignmentGeometry alignment = Alignment.center,
-      Rect centerSlice,
-      ColorFilter colorFilter,
-      bool matchTextDirection = false,
-      BoxFit fit = BoxFit.scaleDown,
-      ImageRepeat repeat = ImageRepeat.noRepeat}) {
-    return DecorationImage(
-        alignment: alignment,
-        centerSlice: centerSlice,
-        colorFilter: colorFilter,
-        matchTextDirection: matchTextDirection,
-        repeat: repeat,
-        fit: fit,
-        image: NetworkImage(this));
-  }
-
-  DecorationImage decorationimageToFitHeight(
-      {AlignmentGeometry alignment = Alignment.center,
-      Rect centerSlice,
-      ColorFilter colorFilter,
-      bool matchTextDirection = false,
-      BoxFit fit = BoxFit.fitHeight,
-      ImageRepeat repeat = ImageRepeat.noRepeat}) {
-    return DecorationImage(
-        alignment: alignment,
-        centerSlice: centerSlice,
-        colorFilter: colorFilter,
-        matchTextDirection: matchTextDirection,
-        repeat: repeat,
-        fit: fit,
-        image: NetworkImage(this));
-  }
-
-  DecorationImage decorationimageToFitWidth(
-      {AlignmentGeometry alignment = Alignment.center,
-      Rect centerSlice,
-      ColorFilter colorFilter,
-      bool matchTextDirection = false,
-      BoxFit fit = BoxFit.fitHeight,
-      ImageRepeat repeat = ImageRepeat.noRepeat}) {
-    return DecorationImage(
-        alignment: alignment,
-        centerSlice: centerSlice,
-        colorFilter: colorFilter,
-        matchTextDirection: matchTextDirection,
-        repeat: repeat,
-        fit: fit,
-        image: NetworkImage(this));
   }
 
   Widget mxCircleNetWorkImage({
