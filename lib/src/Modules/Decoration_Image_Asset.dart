@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension Images on String {
+extension ImageAssets on String {
   DecorationImage decorationimageAssetToCover(
       {AlignmentGeometry alignment = Alignment.center,
       Rect centerSlice,

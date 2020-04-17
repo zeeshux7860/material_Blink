@@ -282,7 +282,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(0.0),
                       image:
                           "https://pixinvent.com/materialize-material-design-admin-template/app-assets/images/gallery/3.png"
-                              .decorationimageToCover())
+                              .decorationimageNetworkToCover())
                 ].mxListViewVerticalClampingScrollPhysics(
                     padding: EdgeInsets.all(0.0)),
               ).fadeInLeft(),

@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-extension Images on String {
+extension ImageFile on String {
   DecorationImage decorationimageFileToCover(
       {AlignmentGeometry alignment = Alignment.center,
       Rect centerSlice,
