@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_blink/material_blink.dart';
-import 'package:material_blink/src/Card/CardTiles.dart';
-import 'package:material_blink/src/Heading/heading.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -289,59 +288,57 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: EdgeInsets.all(0.0)),
               ).fadeInLeft(),
               25.0.sizedHeight(),
-               MxResponsiveGridRow(
-          children: [
-            ResponsiveGridCol(
-              lg: 12,
-              child: Container(
-                height: 100,
-                alignment: Alignment(0, 0),
-                color: Colors.purple,
-                child: Text("lg : 12"),
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 6,
-              md: 3,
-              child: Container(
-                height: 100,
-                alignment: Alignment(0, 0),
-                color: Colors.green,
-                child: Text("xs : 6 \r\nmd : 3"),
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 6,
-              md: 3,
-              child: Container(
-                height: 100,
-                alignment: Alignment(0, 0),
-                color: Colors.orange,
-                child: Text("xs : 6 \r\nmd : 3"),
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 6,
-              md: 3,
-              child: Container(
-                height: 100,
-                alignment: Alignment(0, 0),
-                color: Colors.red,
-                child: Text("xs : 6 \r\nmd : 3"),
-              ),
-            ),
-            ResponsiveGridCol(
-              xs: 6,
-              md: 3,
-              child: Container(
-                height: 100,
-                alignment: Alignment(0, 0),
-                color: Colors.blue,
-                child: Text("xs : 6 \r\nmd : 3"),
-              ),
-            ),
-          ])
-
+              MxResponsiveGridRow(children: [
+                ResponsiveGridCol(
+                  lg: 12,
+                  child: Container(
+                    height: 100,
+                    alignment: Alignment(0, 0),
+                    color: Colors.purple,
+                    child: Text("lg : 12"),
+                  ),
+                ),
+                ResponsiveGridCol(
+                  xs: 6,
+                  md: 3,
+                  child: Container(
+                    height: 100,
+                    alignment: Alignment(0, 0),
+                    color: Colors.green,
+                    child: Text("xs : 6 \r\nmd : 3"),
+                  ),
+                ),
+                ResponsiveGridCol(
+                  xs: 6,
+                  md: 3,
+                  child: Container(
+                    height: 100,
+                    alignment: Alignment(0, 0),
+                    color: Colors.orange,
+                    child: Text("xs : 6 \r\nmd : 3"),
+                  ),
+                ),
+                ResponsiveGridCol(
+                  xs: 6,
+                  md: 3,
+                  child: Container(
+                    height: 100,
+                    alignment: Alignment(0, 0),
+                    color: Colors.red,
+                    child: Text("xs : 6 \r\nmd : 3"),
+                  ),
+                ),
+                ResponsiveGridCol(
+                  xs: 6,
+                  md: 3,
+                  child: Container(
+                    height: 100,
+                    alignment: Alignment(0, 0),
+                    color: Colors.blue,
+                    child: Text("xs : 6 \r\nmd : 3"),
+                  ),
+                ),
+              ])
             ].mxListView()));
   }
 }

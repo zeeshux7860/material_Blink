@@ -2,15 +2,13 @@ library responsive_grid;
 
 import 'package:flutter/widgets.dart';
 
-
 double scalingMargin = 5;
 double refWidth = 375;
 
 double scalingFactor;
 double width;
 
-
-void initScaling(BuildContext context){
+void initScaling(BuildContext context) {
   var mq = MediaQuery.of(context);
   width = mq.size.width < mq.size.height ? mq.size.width : mq.size.height;
   scalingFactor = width / refWidth;
@@ -18,14 +16,13 @@ void initScaling(BuildContext context){
   print("width => $width");
 }
 
-double scale(double dimension){
-  if (width == null){
+double scale(double dimension) {
+  if (width == null) {
     throw Exception("You must call init() before any use of scale()");
   }
   //
   return dimension * scalingFactor;
 }
-
 
 //
 // responsive grid layout
