@@ -51,6 +51,7 @@ class _CrowdTileState extends State<CrowdTile> {
                   page = pageController.page;
                 });
               }
+              return null;
             },
             child: PageView.builder(
               onPageChanged: (pos) {

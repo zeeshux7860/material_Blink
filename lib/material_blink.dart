@@ -39,3 +39,4 @@ export 'src/Heading/GradientTitle.dart';
 export 'src/Heading/heading.dart';
 export 'src/Heading/Title.dart';
 export 'src/Modules/ImageBlue.dart';
+export 'src/responsive/responsive_grid.dart';
