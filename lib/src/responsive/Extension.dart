@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_blink/material_blink.dart';
 
-extension RowGridResponsive on List {
+extension RowGridResponsive on List<ResponsiveGridList> {
   ResponsiveGridList mxResponsiveGridList(
       {double desiredItemWidth,
       double minSpacing,
@@ -15,7 +15,9 @@ extension RowGridResponsive on List {
       squareCells: squareCells,
     );
   }
+}
 
+extension ResponsiveGridRow on List<ResponsiveGridCol> {
   MxResponsiveGridRow mxResponsiveGridRow() {
     return MxResponsiveGridRow(
       children: this,
