@@ -366,7 +366,7 @@ class TypeDefinition {
   }
 
   //bool operator ==(other) {
-  bool operator (other) {
+  bool operator(other) {
     if (other is TypeDefinition) {
       TypeDefinition otherTypeDef = other;
       return this.name == otherTypeDef.name &&
@@ -463,7 +463,7 @@ class ClassDefinition {
 
   ClassDefinition(this._name, [this._privateFields = false]);
 
-  bool operator (other) {
+  bool operator(other) {
     if (other is ClassDefinition) {
       ClassDefinition otherClassDef = other;
       return this.isSubsetOf(otherClassDef) && otherClassDef.isSubsetOf(this);
