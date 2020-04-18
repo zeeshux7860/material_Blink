@@ -667,7 +667,7 @@ extension MxWidget on Widget {
     );
   }
 
-  Widget xoomOut(
+  Widget zoomOut(
       {bool animate = true,
       dynamic Function(AnimationController) controller,
       Duration delay = const Duration(milliseconds: 0),

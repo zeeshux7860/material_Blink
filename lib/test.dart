@@ -208,8 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       circleRadius: 25,
                       backgroundImage: new NetworkImage(
                           "https://yt3.ggpht.com/a/AATXAJzkg71amuGuohhs-ZqQ5Nbf51O9ehemrcVkYw=s288-c-k-c0xffffffff-no-rj-mo"),
-                    ).animation(
-                        configMap: MxAnimationType.fadeInUp, autoPlay: true);
+                    ).zoomIn();
                   },
                 )
               ],
