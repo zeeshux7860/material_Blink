@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 
 extension imageString on String {
   Widget mxImageAsset({
-    /// ---------------
     Map<String, String> headers,
 
     /// A builder function responsible for creating the widget that represents
