@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:material_blink/material_blink.dart';
 
 extension ContainerExtension on Widget {
@@ -279,7 +280,88 @@ extension ContainerExtension on Widget {
       tooltip: tooltip,
     );
   }
+
+  Widget mxCustomCard({
+    double width,
+    Color color = Colors.white,
+    EdgeInsetsGeometry padding,
+    Color shadowColor = Colors.grey,
+    double rounded = 15,
+    double height,
+    double blurRadius = 30,
+    double spreadRadius = 0.2,
+    Offset offset = const Offset(0, 20),
+    Function onTap,
+    EdgeInsetsGeometry margin,
+    DecorationImage image,
+    BorderRadiusGeometry borderRadius,
+  }) {
+    return MxContainer(
+        offset: offset,
+        margin: EdgeInsets.all(50),
+        color: Colors.white,
+        spreadRadius: spreadRadius,
+        blurRadius: blurRadius,
+        shadowColor: shadowColor,
+        rounded: rounded,
+        padding: EdgeInsets.all(0.0),
+        borderRadius: borderRadius,
+        height: height,
+        image: image,
+        key: key,
+        onTap: onTap,
+        width: width,
+        child: this);
+  }
   //tap to copy like
-  // floating extend
   // image.asset container rounded
+}
+
+
+extension imageString on String {
+  Widget mxImageAsset({
+    AlignmentGeometry alignment = Alignment.center,
+    AssetBundle bundle,
+    int cacheHeight,
+    int cacheWidth,
+    Rect centerSlice,
+    Color color,
+    BlendMode colorBlendMode,
+  bool excludeFromSemantics = false,
+  FilterQuality filterQuality = FilterQuality.low,
+    BoxFit fit,
+    Widget Function(BuildContext, Widget, int, bool) frameBuilder,
+    bool gaplessPlayback = false,
+    double height,
+    Key key,
+    bool matchTextDirection = false,
+    String package,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    double scale,
+    String semanticLabel,
+    double width
+  }){
+    return Image.asset(this,
+    alignment: alignment,
+    bundle: bundle,
+    cacheHeight: cacheHeight,
+    cacheWidth: cacheWidth,
+    centerSlice: centerSlice,
+    color: color,
+    colorBlendMode: colorBlendMode,
+    excludeFromSemantics: excludeFromSemantics,
+    filterQuality: filterQuality,
+    fit: fit,
+    frameBuilder: frameBuilder,
+    gaplessPlayback: gaplessPlayback,
+    height: height,
+    key: key,
+    matchTextDirection: matchTextDirection,
+    package: package,
+    repeat: repeat,
+    scale: scale,
+    semanticLabel: semanticLabel,
+    width: width,
+    );
+  }
 }
