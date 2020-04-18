@@ -119,58 +119,88 @@ extension StfulStless on Widget {
   }
 
   Widget mxtbp({double t, double b}) {
-    return Padding(padding: EdgeInsets.only(top: t, bottom: b));
+    return Padding(
+      padding: EdgeInsets.only(top: t, bottom: b),
+      child: this,
+    );
   }
 
   Widget mxltp({double l, double t}) {
-    return Padding(padding: EdgeInsets.only(top: t, left: l));
+    return Padding(
+      padding: EdgeInsets.only(top: t, left: l),
+      child: this,
+    );
   }
 
   Widget mxrtp({double r, double t}) {
-    return Padding(padding: EdgeInsets.only(top: t, right: r));
+    return Padding(
+      padding: EdgeInsets.only(top: t, right: r),
+      child: this,
+    );
   }
 
   Widget mxlbp({double l, double b}) {
-    return Padding(padding: EdgeInsets.only(left: l, bottom: b));
+    return Padding(
+      padding: EdgeInsets.only(left: l, bottom: b),
+      child: this,
+    );
   }
 
   Widget mxlrp({double l, double r}) {
-    return Padding(padding: EdgeInsets.only(left: l, right: r));
+    return Padding(
+      padding: EdgeInsets.only(left: l, right: r),
+      child: this,
+    );
   }
 
   Widget mxrbp({double r, double b}) {
-    return Padding(padding: EdgeInsets.only(right: r, bottom: b));
+    return Padding(
+      padding: EdgeInsets.only(right: r, bottom: b),
+      child: this,
+    );
   }
 }
 
 extension Paddings on double {
-  Widget mxap() {
-    return Padding(padding: EdgeInsets.all(this));
-  }
-
-  Widget mxlp() {
-    return Padding(padding: EdgeInsets.only(left: this));
-  }
-
-  Widget mxrp() {
+  Widget mxap({child}) {
     return Padding(
-        padding: EdgeInsets.only(
-      right: this,
-    ));
+      padding: EdgeInsets.all(this),
+      child: child,
+    );
   }
 
-  Widget mxtp() {
+  Widget mxlp({child}) {
     return Padding(
-        padding: EdgeInsets.only(
-      top: this,
-    ));
+      padding: EdgeInsets.only(left: this),
+      child: child,
+    );
   }
 
-  Widget mxbp() {
+  Widget mxrp({child}) {
     return Padding(
-        padding: EdgeInsets.only(
-      bottom: this,
-    ));
+      padding: EdgeInsets.only(
+        right: this,
+      ),
+      child: child,
+    );
+  }
+
+  Widget mxtp({child}) {
+    return Padding(
+      padding: EdgeInsets.only(
+        top: this,
+      ),
+      child: child,
+    );
+  }
+
+  Widget mxbp({child}) {
+    return Padding(
+      padding: EdgeInsets.only(
+        bottom: this,
+      ),
+      child: child,
+    );
   }
 }
 
@@ -460,6 +490,28 @@ extension Components on String {
 
   Widget textMaterialColorpurple(
       {Color color = Colors.purple, double fontsize, FontWeight fontWeight}) {
+    return Textmaterial(
+      text: this,
+      color: color,
+      fontsize: fontsize,
+      fontWeight: fontWeight,
+    );
+  }
+
+  Widget textMaterialColorRed(
+      {Color color = Colors.red, double fontsize, FontWeight fontWeight}) {
+    return Textmaterial(
+      text: this,
+      color: color,
+      fontsize: fontsize,
+      fontWeight: fontWeight,
+    );
+  }
+
+  Widget textMaterialColorRedAccent(
+      {Color color = Colors.redAccent,
+      double fontsize,
+      FontWeight fontWeight}) {
     return Textmaterial(
       text: this,
       color: color,
