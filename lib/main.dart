@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Icons.arrow_back_ios.mxIconTile(),
                       "Monday 27 july 2000".textMaterialColorWhite(),
                       Icons.arrow_forward_ios.mxIconTile(),
-                    ].mxRowCAAcenterMAAspaceBetween(),
+                    ].mxRowCSB(),
                     25.0.sizedHeight(),
                     H2(
                       text: '7h 26Min',
@@ -206,7 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   .animation(configMap: MxAnimationType.fadeIn, autoPlay: true),
               //Textmaterial(text: "null"),
               <Widget>[Icon(Icons.ac_unit).bounce()]
-                  .mxRowCAAcenterMAAspaceBetween(),
+                  .mxRowCSB(),
               <Widget>[
                 H1(
                   text: 'aaaaa',

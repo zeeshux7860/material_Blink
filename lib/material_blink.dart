@@ -55,3 +55,4 @@ export 'src/Extension/Floating_extend.dart';
 export 'src/Extension/SnackBar.dart';
 export 'src/Extension/InkWell.dart';
 export 'src/Extension/Column.dart';
+export 'src/Extension/Row.dart';
