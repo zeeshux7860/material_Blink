@@ -72,10 +72,6 @@ extension ContainerExtension on Widget {
     );
   }
 
- 
-
-
-
   Widget mxCustomCard({
     double width,
     Color color = Colors.white,

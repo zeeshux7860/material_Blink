@@ -1,257 +1,7 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-extension MxListView on List<Widget> {
-  Widget mxListView({
-    bool addAutomaticKeepAlives = true,
-    bool addRepaintBoundaries = true,
-    bool addSemanticIndexes = true,
-    double cacheExtent,
-    ScrollController controller,
-    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
-    double itemExtent,
-    Key key,
-    EdgeInsetsGeometry padding,
-    ScrollPhysics physics,
-    bool primary,
-    bool reverse = false,
-    int semanticChildCount,
-    Axis scrollDirection = Axis.vertical,
-    bool shrinkWrap = false,
-  }) {
-    return ListView(
-      addAutomaticKeepAlives: addAutomaticKeepAlives,
-      addRepaintBoundaries: addRepaintBoundaries,
-      addSemanticIndexes: addSemanticIndexes,
-      cacheExtent: cacheExtent,
-      controller: controller,
-      dragStartBehavior: dragStartBehavior,
-      itemExtent: itemExtent,
-      key: key,
-      padding: padding,
-      physics: physics,
-      primary: primary,
-      reverse: reverse,
-      semanticChildCount: semanticChildCount,
-      shrinkWrap: shrinkWrap,
-      scrollDirection: scrollDirection,
-      children: this,
-    );
-  }
-
-  Widget mxListViewVertical({
-    bool addAutomaticKeepAlives = true,
-    bool addRepaintBoundaries = true,
-    bool addSemanticIndexes = true,
-    double cacheExtent,
-    ScrollController controller,
-    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
-    double itemExtent,
-    Key key,
-    EdgeInsetsGeometry padding,
-    ScrollPhysics physics,
-    bool primary,
-    bool reverse = false,
-    int semanticChildCount,
-    bool shrinkWrap = false,
-  }) {
-    return ListView(
-      addAutomaticKeepAlives: addAutomaticKeepAlives,
-      addRepaintBoundaries: addRepaintBoundaries,
-      addSemanticIndexes: addSemanticIndexes,
-      cacheExtent: cacheExtent,
-      controller: controller,
-      dragStartBehavior: dragStartBehavior,
-      itemExtent: itemExtent,
-      key: key,
-      padding: padding,
-      physics: physics,
-      primary: primary,
-      reverse: reverse,
-      semanticChildCount: semanticChildCount,
-      shrinkWrap: shrinkWrap,
-      scrollDirection: Axis.vertical,
-      children: this,
-    );
-  }
-
-  Widget mxListViewHorizontal({
-    bool addAutomaticKeepAlives = true,
-    bool addRepaintBoundaries = true,
-    bool addSemanticIndexes = true,
-    double cacheExtent,
-    ScrollController controller,
-    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
-    double itemExtent,
-    Key key,
-    EdgeInsetsGeometry padding,
-    ScrollPhysics physics,
-    bool primary,
-    bool reverse = false,
-    int semanticChildCount,
-    bool shrinkWrap = false,
-  }) {
-    return ListView(
-      addAutomaticKeepAlives: addAutomaticKeepAlives,
-      addRepaintBoundaries: addRepaintBoundaries,
-      addSemanticIndexes: addSemanticIndexes,
-      cacheExtent: cacheExtent,
-      controller: controller,
-      dragStartBehavior: dragStartBehavior,
-      itemExtent: itemExtent,
-      key: key,
-      padding: padding,
-      physics: physics,
-      primary: primary,
-      reverse: reverse,
-      semanticChildCount: semanticChildCount,
-      shrinkWrap: shrinkWrap,
-      scrollDirection: Axis.horizontal,
-      children: this,
-    );
-  }
-
-  Widget mxListViewHorizontalClampingScrollPhysics({
-    bool addAutomaticKeepAlives = true,
-    bool addRepaintBoundaries = true,
-    bool addSemanticIndexes = true,
-    double cacheExtent,
-    ScrollController controller,
-    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
-    double itemExtent,
-    Key key,
-    EdgeInsetsGeometry padding,
-    bool primary,
-    bool reverse = false,
-    int semanticChildCount,
-  }) {
-    return ListView(
-      addAutomaticKeepAlives: addAutomaticKeepAlives,
-      addRepaintBoundaries: addRepaintBoundaries,
-      addSemanticIndexes: addSemanticIndexes,
-      cacheExtent: cacheExtent,
-      controller: controller,
-      dragStartBehavior: dragStartBehavior,
-      itemExtent: itemExtent,
-      key: key,
-      padding: padding,
-      physics: ClampingScrollPhysics(),
-      primary: primary,
-      reverse: reverse,
-      semanticChildCount: semanticChildCount,
-      shrinkWrap: true,
-      scrollDirection: Axis.horizontal,
-      children: this,
-    );
-  }
-
-  Widget mxListViewVerticalClampingScrollPhysics({
-    bool addAutomaticKeepAlives = true,
-    bool addRepaintBoundaries = true,
-    bool addSemanticIndexes = true,
-    double cacheExtent,
-    ScrollController controller,
-    DragStartBehavior dragStartBehavior = DragStartBehavior.start,
-    double itemExtent,
-    Key key,
-    EdgeInsetsGeometry padding,
-    bool primary,
-    bool reverse = false,
-    int semanticChildCount,
-  }) {
-    return ListView(
-      addAutomaticKeepAlives: addAutomaticKeepAlives,
-      addRepaintBoundaries: addRepaintBoundaries,
-      addSemanticIndexes: addSemanticIndexes,
-      cacheExtent: cacheExtent,
-      controller: controller,
-      dragStartBehavior: dragStartBehavior,
-      itemExtent: itemExtent,
-      key: key,
-      padding: padding,
-      physics: ClampingScrollPhysics(),
-      primary: primary,
-      reverse: reverse,
-      semanticChildCount: semanticChildCount,
-      shrinkWrap: true,
-      scrollDirection: Axis.vertical,
-      children: this,
-    );
-  }
-
-  Widget mxListViewVerticalNeverScrollableScrollPhysics(
-      {bool addAutomaticKeepAlives = true,
-      bool addRepaintBoundaries = true,
-      bool addSemanticIndexes = true,
-      double cacheExtent,
-      ScrollController controller,
-      DragStartBehavior dragStartBehavior = DragStartBehavior.start,
-      double itemExtent,
-      Key key,
-      EdgeInsetsGeometry padding,
-      bool primary,
-      bool reverse = false,
-      int semanticChildCount,
-      ScrollPhysics parent}) {
-    return ListView(
-      addAutomaticKeepAlives: addAutomaticKeepAlives,
-      addRepaintBoundaries: addRepaintBoundaries,
-      addSemanticIndexes: addSemanticIndexes,
-      cacheExtent: cacheExtent,
-      controller: controller,
-      dragStartBehavior: dragStartBehavior,
-      itemExtent: itemExtent,
-      key: key,
-      padding: padding,
-      physics: NeverScrollableScrollPhysics(parent: parent),
-      primary: primary,
-      reverse: reverse,
-      semanticChildCount: semanticChildCount,
-      shrinkWrap: true,
-      scrollDirection: Axis.vertical,
-      children: this,
-    );
-  }
-
-  Widget mxListViewHorizontalNeverScrollableScrollPhysics(
-      {bool addAutomaticKeepAlives = true,
-      bool addRepaintBoundaries = true,
-      bool addSemanticIndexes = true,
-      double cacheExtent,
-      ScrollController controller,
-      DragStartBehavior dragStartBehavior = DragStartBehavior.start,
-      double itemExtent,
-      Key key,
-      EdgeInsetsGeometry padding,
-      bool primary,
-      bool reverse = false,
-      int semanticChildCount,
-      ScrollPhysics parent}) {
-    return ListView(
-      addAutomaticKeepAlives: addAutomaticKeepAlives,
-      addRepaintBoundaries: addRepaintBoundaries,
-      addSemanticIndexes: addSemanticIndexes,
-      cacheExtent: cacheExtent,
-      controller: controller,
-      dragStartBehavior: dragStartBehavior,
-      itemExtent: itemExtent,
-      key: key,
-      padding: padding,
-      physics: NeverScrollableScrollPhysics(parent: parent),
-      primary: primary,
-      reverse: reverse,
-      semanticChildCount: semanticChildCount,
-      shrinkWrap: true,
-      scrollDirection: Axis.horizontal,
-      children: this,
-    );
-  }
-
-  ///----------------------------------------------------------------------------------- Start Row
-  ///
-  ///
-  ///
-  Widget mxRow(
+extension ColumnWudget on List<Widget> {
+  Widget mxcolumn(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
@@ -259,7 +9,7 @@ extension MxListView on List<Widget> {
       VerticalDirection verticalDirection = VerticalDirection.down,
       CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
       MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -271,13 +21,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAstartMAAstart(
+  Widget mxcolumnSS(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -289,13 +39,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAbaselineMAAstart(
+  Widget mxcolumnBS(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -307,13 +57,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAendMAAstart(
+  Widget mxcolumnES(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -325,13 +75,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAstretchMAAstart(
+  Widget mxcolumnSTS(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -345,13 +95,13 @@ extension MxListView on List<Widget> {
 
   //----------------------------------------------------------  end  start
 
-  Widget mxRowCAAstretchMAAcenter(
+  Widget mxcolumnSTC(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -363,13 +113,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAstartMAAcenter(
+  Widget mxcolumnSC(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -381,13 +131,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAendMAAcenter(
+  Widget mxcolumnEC(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -399,13 +149,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAcenterMAAcenter(
+  Widget mxcolumnCC(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -417,13 +167,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAbaselineMAAcenter(
+  Widget mxcolumnBC(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -437,13 +187,13 @@ extension MxListView on List<Widget> {
 
   // ------------------------------------------------------------ emd center
 
-  Widget mxRowCAAstretchMAAend(
+  Widget mxcolumnSTE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -455,13 +205,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAstartMAAend(
+  Widget mxcolumnSE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -473,13 +223,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAendMAAend(
+  Widget mxcolumnEE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -491,13 +241,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAcenterMAAend(
+  Widget mxcolumnCE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -509,13 +259,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAbaselineMAAend(
+  Widget mxcolumnBE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -529,13 +279,13 @@ extension MxListView on List<Widget> {
 
   // ------------------------------------------------------------ emd end
 
-  Widget mxRowCAAstretchMAAspaceAround(
+  Widget mxcolumnSTSA(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -547,13 +297,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAstartMAAspaceAround(
+  Widget mxcolumnSSA(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -565,13 +315,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAendMAAspaceAround(
+  Widget mxcolumnESA(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -583,13 +333,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAcenterMAAspaceAround(
+  Widget mxcolumnCSA(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -601,13 +351,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAbaselineMAAspaceAround(
+  Widget mxcolumnBSA(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -621,13 +371,13 @@ extension MxListView on List<Widget> {
 
   // ------------------------------------------------------------- end spaceAround
 
-  Widget mxRowCAAstretchMAAspaceBetween(
+  Widget mxcolumnSTSB(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -639,13 +389,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAstartMAAspaceBetween(
+  Widget mxcolumnSSB(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -657,13 +407,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAendMAAspaceBetween(
+  Widget mxcolumnESB(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -675,13 +425,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAcenterMAAspaceBetween(
+  Widget mxcolumnCSB(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -693,13 +443,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAbaselineMAAspaceBetween(
+  Widget mxcolumnBSB(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -712,13 +462,13 @@ extension MxListView on List<Widget> {
   }
 
   // ------------------------------------------------------------- end spaceBetween
-  Widget mxRowCAAstretchMAAspaceEvenly(
+  Widget mxcolumnSTSE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -730,13 +480,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAstartMAAspaceEvenly(
+  Widget mxcolumnSSE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -748,13 +498,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAendMAAspaceEvenly(
+  Widget mxcolumnESE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -766,13 +516,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAcenterMAAspaceEvenly(
+  Widget mxcolumnCSE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -784,13 +534,13 @@ extension MxListView on List<Widget> {
     );
   }
 
-  Widget mxRowCAAbaselineMAAspaceEvenly(
+  Widget mxcolumnBSE(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
       TextBaseline textBaseline,
       TextDirection textDirection,
       VerticalDirection verticalDirection = VerticalDirection.down}) {
-    return Row(
+    return Column(
       mainAxisSize: mainAxisSize,
       textBaseline: textBaseline,
       textDirection: textDirection,
@@ -801,5 +551,4 @@ extension MxListView on List<Widget> {
       children: this,
     );
   }
-  // ··· spaceEvenly
 }

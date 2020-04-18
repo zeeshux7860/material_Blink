@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontsize: 15, fontWeight: FontWeight.bold),
                   5.0.sizedHeight(),
                   "sep 15 2019".textMaterialColorblueGrey()
-                ].mxcolumnCAAcenterMAAcenter(),
+                ].mxcolumnCC(),
               ),
 
               HeaderTitle(
@@ -219,7 +219,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         height: 100,
                         color: Colors.pink)
                     .roulette()
-              ].mxcolumnCAAcenterMAAcenter(),
+              ].mxcolumnCC(),
               30.0.sizedHeight(),
               CardTile(
                 margin: EdgeInsets.all(10),
@@ -258,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     10.0.sizedHeight(),
                     'On apple watch'.h3TextBold(fontWeight: FontWeight.normal),
                     25.0.sizedHeight(),
-                  ].mxcolumnCAAcenterMAAcenter()),
+                  ].mxcolumnCC()),
               25.0.sizedHeight(),
               MxContainer(
                 padding: EdgeInsets.all(0.0),
@@ -271,7 +271,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontsize: 30, fontWeight: FontWeight.bold),
                         subtitle: "June 18, Thu 04:50".textMaterialColorBlack(),
                       ),
-                    ].mxcolumnCAAstartMAAcenter(),
+                    ].mxcolumnSC(),
                   ),
                   MxContainer(
                       child: MximageBlur(

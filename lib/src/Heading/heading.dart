@@ -17,8 +17,7 @@ class HeaderTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: padding,
-      child: <Widget>[title, middileSpace.sizedHeight(), subtitle]
-          .mxcolumnCAAstartMAAstart(),
+      child: <Widget>[title, middileSpace.sizedHeight(), subtitle].mxcolumnSS(),
     );
   }
 }
