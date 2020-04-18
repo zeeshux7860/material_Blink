@@ -204,7 +204,6 @@ extension Paddings on double {
   }
 }
 
-
 extension ComponentsIconData on IconData {
   Widget mxIconTile({double size = 15, Color color = Colors.white}) {
     return new Icon(
