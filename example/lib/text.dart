@@ -205,8 +205,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     button: 'know more'.cardBannerButton(onTap: () {}))
                 .animation(configMap: MxAnimationType.fadeIn, autoPlay: true),
             //Textmaterial(text: "null"),
-            <Widget>[Icon(Icons.ac_unit).bounce()]
-                .mxRowCSB(),
+            <Widget>[Icon(Icons.ac_unit).bounce()].mxRowCSB(),
             <Widget>[
               H1(
                 text: 'aaaaa',

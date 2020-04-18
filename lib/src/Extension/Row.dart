@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension RowWidget on List<Widget>{
-
-  
+extension RowWidget on List<Widget> {
   Widget mxRow(
       {Key key,
       MainAxisSize mainAxisSize = MainAxisSize.max,
