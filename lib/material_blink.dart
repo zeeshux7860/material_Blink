@@ -57,3 +57,5 @@ export 'src/Extension/InkWell.dart';
 export 'src/Extension/Column.dart';
 export 'src/Extension/Row.dart';
 export 'src/Extension/String.dart';
+export 'src/Context/size.dart';
+export 'src/Context/Transparent.dart';
