@@ -4,10 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 extension imageString on String {
-  Widget mxImageAsset(
-      {
-      /// ---------------
-       Map<String, String> headers,
+  Widget mxImageAsset({
+    /// ---------------
+    Map<String, String> headers,
 
     /// A builder function responsible for creating the widget that represents
     /// this image.
@@ -292,8 +291,8 @@ extension imageString on String {
     int cacheWidth,
     int cacheHeight,
     Key key,
-       AssetBundle bundle,
-      }) {
+    AssetBundle bundle,
+  }) {
     return Image.asset(
       this,
       alignment: alignment,
@@ -320,7 +319,6 @@ extension imageString on String {
   }
 
   Widget mxImageNetwork({
-
     Map<String, String> headers,
 
     /// A builder function responsible for creating the widget that represents
@@ -631,12 +629,7 @@ extension imageString on String {
     );
   }
 
-  Widget mxImageFile(
-      {
-      
-
-
-      
+  Widget mxImageFile({
     Map<String, String> headers,
 
     /// A builder function responsible for creating the widget that represents
@@ -921,7 +914,7 @@ extension imageString on String {
     int cacheWidth,
     int cacheHeight,
     Key key,
-      }) {
+  }) {
     return Image.file(
       File(this),
       alignment: alignment,
