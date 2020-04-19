@@ -10,6 +10,7 @@ extension StringWidget on Widget {
     return InkWell(
       child: this,
       onTap: () {
+        print(this.toString());
         Clipboard.setData(new ClipboardData(text: this.toString()));
         Scaffold.of(context).showSnackBar(snackBar);
       },
