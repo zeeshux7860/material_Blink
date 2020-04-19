@@ -58,5 +58,6 @@ export 'src/Extension/Column.dart';
 export 'src/Extension/Row.dart';
 export 'src/Extension/String.dart';
 export 'src/Extension/Widget_String.dart';
+export 'src/Extension/Padding.dart';
 export 'src/Context/size.dart';
 export 'src/Context/Transparent.dart';
