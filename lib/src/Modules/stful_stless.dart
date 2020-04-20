@@ -126,24 +126,78 @@ extension ComponentsIconData on IconData {
     );
   }
 
+  Widget mxIconActive(
+      {double size = 15,
+      Color color = Colors.grey,
+      Color activeColor = Colors.red,
+      bool value}) {
+    return new Icon(
+      this,
+      size: size,
+      color: value ? activeColor : color,
+    );
+  }
+
+  Widget mxIconBadge({
+    Function onPressed,
+    int badgeValue = 0,
+    Color iconColor,
+    Widget text,
+    Color badgeColor = Colors.red,
+  }) {
+    return new Stack(
+      children: <Widget>[
+        new IconButton(
+          icon: Icon(this),
+          onPressed: onPressed,
+          color: iconColor,
+        ),
+        badgeValue != 0
+            ? new Positioned(
+                right: 11,
+                top: 11,
+                child: new Container(
+                    padding: EdgeInsets.all(2),
+                    decoration: new BoxDecoration(
+                      color: badgeColor,
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    constraints: BoxConstraints(
+                      minWidth: 14,
+                      minHeight: 14,
+                    ),
+                    child: text),
+              )
+            : new Container()
+      ],
+    );
+  }
+
   Widget mxListTileIcon(
       {double size = 30,
+      Function onTap,
       Color color = Colors.red,
       double height = 50,
       double width = 50}) {
-    return <Widget>[
-      MxContainer(
-          width: width,
-          height: height,
-          color: color.withOpacity(0.1),
-          rounded: 10,
-          child: Icon(
-            this,
-            size: size,
-            color: color,
-          ).toCenter()),
-    ].mxcolumn(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start);
+    return MxContainer(
+        onTap: onTap,
+        width: width,
+        height: height,
+        color: color.withOpacity(0.1),
+        rounded: 10,
+        child: Icon(
+          this,
+          size: size,
+          color: color,
+        ).toCenter());
+  }
+}
+
+extension Lableicon on Widget {
+  Widget lableIcon({Widget lable}) {
+    return MxContainer(
+      child:
+          <Widget>[this.mxap(value: 5), 10.0.sizedHeight(), lable].mxcolumn(),
+    );
   }
 }
