@@ -194,8 +194,38 @@ extension ComponentsIconData on IconData {
 }
 
 extension Lableicon on Widget {
-  Widget lableIcon({Widget lable}) {
+  Widget lableIcon({
+    Widget lable,
+    final double width,
+    final Color color,
+    final EdgeInsetsGeometry padding,
+    final Color shadowColor,
+    final double rounded,
+    final Widget child,
+    final double height,
+    final double blurRadius,
+    final double spreadRadius,
+    final Offset offset,
+    final Function onTap,
+    final EdgeInsetsGeometry margin,
+    final DecorationImage image,
+    final BorderRadiusGeometry borderRadius,
+  }) {
     return MxContainer(
+      blurRadius: blurRadius,
+      borderRadius: borderRadius,
+      color: color,
+      height: height,
+      image: image,
+      key: key,
+      margin: margin,
+      offset: offset,
+      onTap: onTap,
+      padding: padding,
+      rounded: rounded,
+      shadowColor: shadowColor,
+      spreadRadius: spreadRadius,
+      width: width,
       child:
           <Widget>[this.mxap(value: 5), 10.0.sizedHeight(), lable].mxcolumn(),
     );
