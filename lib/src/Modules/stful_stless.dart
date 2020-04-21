@@ -191,6 +191,26 @@ extension ComponentsIconData on IconData {
           color: color,
         ).toCenter());
   }
+
+  Widget mxTransactionTileIcon(
+      {double size = 30,
+      Function onTap,
+      Color color = Colors.red,
+      Color iconcColor = Colors.white,
+      double height = 50,
+      double width = 50}) {
+    return MxContainer(
+        onTap: onTap,
+        width: width,
+        height: height,
+        color: color,
+        rounded: 10,
+        child: Icon(
+          this,
+          size: size,
+          color: iconcColor,
+        ).toCenter());
+  }
 }
 
 extension Lableicon on Widget {
