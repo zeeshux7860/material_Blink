@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_blink/material_blink.dart';
 
-class MxTransactiontTle extends StatelessWidget {
+class MxTransactiontTile extends StatelessWidget {
   final Function onTap;
   final Widget leading;
   final Widget subtitle;
@@ -9,7 +9,7 @@ class MxTransactiontTle extends StatelessWidget {
   final Widget trailing1;
   final Widget trailing2;
   final Widget title;
-  const MxTransactiontTle(
+  const MxTransactiontTile(
       {Key key,
       this.onTap,
       this.leading,

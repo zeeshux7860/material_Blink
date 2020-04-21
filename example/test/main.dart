@@ -1,5 +1,8 @@
-import 'package:material_blink/src/convert/json_to_dart.dart';
+//import 'dart:io';
+import 'package:material_blink/MxServices.dart';
 
+//import 'package:material_blink/src/convert/json_to_dart.dart';
+/*
 main() async {
   var res = await dartGenerate("name", """{
     "glossary": {
@@ -25,4 +28,16 @@ main() async {
 }""");
 
   print(res.code);
+}
+*/
+List stlessName = ['profile', 'homePage', 'setting'];
+List stfullName = ['profile', 'homePage', 'setting'];
+main() {
+  stlessName.forEach((f) {
+    mxStless(f+'Stless', 'lib/MX');
+  });
+   stfullName.forEach((f) {
+    mxStfull(f+'Stfull', 'lib/MX');
+  });
+  print("done");
 }
