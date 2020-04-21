@@ -28,10 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: "TransactiontTile ".textMaterialColorBlack(),
       ),
       body: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: <Widget>[
-          
-          ].mxListView()),
+          padding: const EdgeInsets.all(10.0), child: <Widget>[].mxListView()),
     );
   }
 }

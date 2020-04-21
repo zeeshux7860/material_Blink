@@ -1,10 +1,8 @@
-
 import 'package:material_blink/MxServices.dart';
 
-
-void mxStless(String name,String path){
-  String  widgetname = name[0].toUpperCase() + name.substring(1);
-String contents = """
+void mxStless(String name, String path) {
+  String widgetname = name[0].toUpperCase() + name.substring(1);
+  String contents = """
 import 'package:material_blink/material_blink.dart';
 
 class $widgetname extends StatelessWidget {
@@ -16,13 +14,12 @@ class $widgetname extends StatelessWidget {
   }
 }""";
 
-fileCreate(path,contents,widgetname+'.dart');
+  fileCreate(path, contents, widgetname + '.dart');
 }
 
-
-void mxStfull(String name,String path){
-  String  widgetname = name[0].toUpperCase() + name.substring(1);
-String contents = """
+void mxStfull(String name, String path) {
+  String widgetname = name[0].toUpperCase() + name.substring(1);
+  String contents = """
 import 'package:material_blink/material_blink.dart';
 
 class $widgetname extends StatefulWidget {
@@ -39,6 +36,5 @@ class _$widgetname\State extends State<$widgetname> {
   }
 }""";
 
-fileCreate(path,contents,widgetname+'.dart');
+  fileCreate(path, contents, widgetname + '.dart');
 }
-
