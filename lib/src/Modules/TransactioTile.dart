@@ -29,9 +29,9 @@ class MxTransactiontTle extends StatelessWidget {
       title: title,
       subtitle: subtitle,
       trailing: <Widget>[
-        trailing1 == null ? new Container() : trailing1,
+        trailing1 == null ?  Container() : trailing1,
         middleSpace.sizedHeight(),
-        trailing2 == null ? new Container() : trailing2
+        trailing2 == null ?  Container() : trailing2
       ].mxcolumnCC(),
     );
   }
