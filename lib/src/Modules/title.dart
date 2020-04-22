@@ -5,16 +5,32 @@ import 'package:material_blink/src/Text/h_tag.dart';
 class MxTitle extends StatelessWidget {
   final double leftPadding;
   final String title;
-
-  const MxTitle({Key key, this.leftPadding, this.title}) : super(key: key);
+  final Color color;
+  const MxTitle({Key key, this.leftPadding, this.title, this.color})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: leftPadding == null ? 10 : leftPadding),
       child: H1(
+        color: color,
         text: title,
         fontWeight: FontWeight.bold,
       ),
+    );
+  }
+}
+
+class MxTitleWidget extends StatelessWidget {
+  final double leftPadding;
+  final Widget child;
+  const MxTitleWidget({Key key, this.leftPadding, this.child})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: leftPadding == null ? 10 : leftPadding),
+      child: child,
     );
   }
 }
