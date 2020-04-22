@@ -303,11 +303,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ].mxResponsiveGridRow()
           ].mxListView()),
       floatingActionButton: "check".mxFloationActiobButton(onTap: () {
-        var isDesktops = isDesktop(context);
+        var isDesktops = context.isDesktop();
         print(isDesktops);
-        var isTablets = isTablet(context);
+        var isTablets = context.isTablet();
         print(isTablets);
-        var isMobiles = isMobile(context);
+        var isMobiles = context.isMobile();
         print(isMobiles);
       }),
     );
