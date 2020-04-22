@@ -1,7 +1,8 @@
 import 'package:material_blink/material_blink.dart';
 
 extension TextEditor on String {
-  Widget mxCodeEditor(lines) {
+  Widget mxCodeEditor() {
+    var lines = '\n'.allMatches(this).length + 1;
     return <Widget>[
       Padding(
         padding: const EdgeInsets.all(8.0),
