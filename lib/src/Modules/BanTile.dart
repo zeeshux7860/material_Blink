@@ -15,14 +15,13 @@ class BanTile extends StatelessWidget {
     return <Widget>[
       <Widget>[
         leftTile == null ? Container() : leftTile,
-       
+
         //"Monday 27 july 2000".textMaterialColorWhite(),
         centerTitle == null ? Container() : centerTitle,
         rightTile == null ? Container() : rightTile,
-        
       ].mxRowCSB(),
-    //  25.0.sizedHeight(),
-     body == null ? Container() : body,
+      //  25.0.sizedHeight(),
+      body == null ? Container() : body,
       //20.0.sizedHeight(),
     ].mxcolumn();
   }

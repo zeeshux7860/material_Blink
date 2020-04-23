@@ -86,5 +86,4 @@ extension MxNew on Widget {
       radius: radius,
     );
   }
-
 }
