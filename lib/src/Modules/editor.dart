@@ -2,7 +2,23 @@ import 'package:material_blink/material_blink.dart';
 
 extension TextEditor on String {
   Widget mxCodeEditor() {
-    var lines = '\n'.allMatches(this).length + 1;
+    return EditorMX(code: this);
+  }
+}
+
+class EditorMX extends StatefulWidget {
+  final String code;
+
+  const EditorMX({Key key, this.code}) : super(key: key);
+  @override
+  _EditorMXState createState() => _EditorMXState();
+}
+
+class _EditorMXState extends State<EditorMX> {
+  int lines = 0;
+
+  @override
+  Widget build(BuildContext context) {
     return <Widget>[
       Padding(
         padding: const EdgeInsets.all(8.0),
@@ -44,12 +60,22 @@ extension TextEditor on String {
               }),
         ),
         Flexible(
-            child: SelectableText(
-          this,
-          showCursor: true,
-          toolbarOptions: ToolbarOptions(selectAll: true, copy: true),
-          style: TextStyle(color: Colors.white, fontSize: 14),
+            child: TextField(
+          controller: TextEditingController(text: widget.code),
+          // readOnly: true,
+          maxLines: null,
+          toolbarOptions: ToolbarOptions(copy: true, selectAll: true),
           cursorColor: Colors.red,
+          style: TextStyle(color: Colors.white, fontSize: 14),
+          decoration: InputDecoration(
+            focusedBorder: InputBorder.none,
+            border: InputBorder.none,
+          ),
+          onChanged: (a) {
+            setState(() {
+              lines = '\n'.allMatches(a).length + 1;
+            });
+          },
         ))
       ].mxRow().mxContainer(
           padding: EdgeInsets.all(12), shadowColor: Colors.grey, blurRadius: 12)
