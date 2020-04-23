@@ -64,3 +64,4 @@ export 'src/Context/size.dart';
 export 'src/Context/Transparent.dart';
 export 'src/Modules/TransactioTile.dart';
 export 'src/Modules/editor.dart';
+export 'src/Modules/BanTile.dart';

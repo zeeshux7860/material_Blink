@@ -115,6 +115,150 @@ extension StfulStless on Widget {
         splashColor: splashColor,
         child: this);
   }
+
+  Widget mcIconButton({
+    Key key,
+
+    /// The size of the icon inside the button.
+    ///
+    /// This property must not be null. It defaults to 24.0.
+    ///
+    /// The size given here is passed down to the widget in the [icon] property
+    /// via an [IconTheme]. Setting the size here instead of in, for example, the
+    /// [Icon.size] property allows the [IconButton] to size the splash area to
+    /// fit the [Icon]. If you were to set the size of the [Icon] using
+    /// [Icon.size] instead, then the [IconButton] would default to 24.0 and then
+    /// the [Icon] itself would likely get clipped.
+    final double iconSize = 24.0,
+
+    /// The padding around the button's icon. The entire padded icon will react
+    /// to input gestures.
+    ///
+    /// This property must not be null. It defaults to 8.0 padding on all sides.
+    final EdgeInsetsGeometry padding = const EdgeInsets.all(8.0),
+
+    /// Defines how the icon is positioned within the IconButton.
+    ///
+    /// This property must not be null. It defaults to [Alignment.center].
+    ///
+    /// See also:
+    ///
+    ///  * [Alignment], a class with convenient constants typically used to
+    ///    specify an [AlignmentGeometry].
+    ///  * [AlignmentDirectional], like [Alignment] for specifying alignments
+    ///    relative to text direction.
+    final AlignmentGeometry alignment = Alignment.center,
+
+    /// The icon to display inside the button.
+    ///
+    /// The [Icon.size] and [Icon.color] of the icon is configured automatically
+    /// based on the [iconSize] and [color] properties of _this_ widget using an
+    /// [IconTheme] and therefore should not be explicitly given in the icon
+    /// widget.
+    ///
+    /// This property must not be null.
+    ///
+    /// See [Icon], [ImageIcon].
+    final Widget icon,
+
+    /// The color for the button's icon when it has the input focus.
+    ///
+    /// Defaults to [ThemeData.focusColor] of the ambient theme.
+    final Color focusColor,
+
+    /// The color for the button's icon when a pointer is hovering over it.
+    ///
+    /// Defaults to [ThemeData.hoverColor] of the ambient theme.
+    final Color hoverColor,
+
+    /// The color to use for the icon inside the button, if the icon is enabled.
+    /// Defaults to leaving this up to the [icon] widget.
+    ///
+    /// The icon is enabled if [onPressed] is not null.
+    ///
+    /// See also [disabledColor].
+    ///
+    /// ```dart
+    /// IconButton(
+    ///   color: Colors.blue,
+    ///   onPressed: _handleTap,
+    ///   icon: Icons.widgets,
+    /// )
+    /// ```
+    final Color color,
+
+    /// The primary color of the button when the button is in the down (pressed) state.
+    /// The splash is represented as a circular overlay that appears above the
+    /// [highlightColor] overlay. The splash overlay has a center point that matches
+    /// the hit point of the user touch event. The splash overlay will expand to
+    /// fill the button area if the touch is held for long enough time. If the splash
+    /// color has transparency then the highlight and button color will show through.
+    ///
+    /// Defaults to the Theme's splash color, [ThemeData.splashColor].
+    final Color splashColor,
+
+    /// The secondary color of the button when the button is in the down (pressed)
+    /// state. The highlight color is represented as a solid color that is overlaid over the
+    /// button color (if any). If the highlight color has transparency, the button color
+    /// will show through. The highlight fades in quickly as the button is held down.
+    ///
+    /// Defaults to the Theme's highlight color, [ThemeData.highlightColor].
+    final Color highlightColor,
+
+    /// The color to use for the icon inside the button, if the icon is disabled.
+    /// Defaults to the [ThemeData.disabledColor] of the current [Theme].
+    ///
+    /// The icon is disabled if [onPressed] is null.
+    ///
+    /// See also [color].
+    final Color disabledColor,
+
+    /// The callback that is called when the button is tapped or otherwise activated.
+    ///
+    /// If this is set to null, the button will be disabled.
+    final VoidCallback onPressed,
+
+    /// {@macro flutter.widgets.Focus.focusNode}
+    final FocusNode focusNode,
+
+    /// {@macro flutter.widgets.Focus.autofocus}
+    final bool autofocus = false,
+
+    /// Text that describes the action that will occur when the button is pressed.
+    ///
+    /// This text is displayed when the user long-presses on the button and is
+    /// used for accessibility.
+    final String tooltip,
+
+    /// Whether detected gestures should provide acoustic and/or haptic feedback.
+    ///
+    /// For example, on Android a tap will produce a clicking sound and a
+    /// long-press will produce a short vibration, when feedback is enabled.
+    ///
+    /// See also:
+    ///
+    ///  * [Feedback] for providing platform-specific feedback to certain actions.
+    final bool enableFeedback = true,
+  }) {
+    return IconButton(
+      icon: this,
+      onPressed: onPressed,
+      alignment: alignment,
+      autofocus: autofocus,
+      color: color,
+      disabledColor: disabledColor,
+      enableFeedback: enableFeedback,
+      focusColor: focusColor,
+      focusNode: focusNode,
+      highlightColor: highlightColor,
+      hoverColor: hoverColor,
+      iconSize: iconSize,
+      key: key,
+      padding: padding,
+      splashColor: splashColor,
+      tooltip: tooltip,
+    );
+  }
 }
 
 extension ComponentsIconData on IconData {

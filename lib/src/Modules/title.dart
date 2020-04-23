@@ -6,7 +6,7 @@ class MxTitle extends StatelessWidget {
   final double leftPadding;
   final String title;
   final Color color;
-  const MxTitle({Key key, this.leftPadding, this.title, this.color})
+  const MxTitle({Key key, this.leftPadding, @required this.title, this.color})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

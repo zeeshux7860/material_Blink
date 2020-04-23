@@ -555,7 +555,7 @@ extension imageString on String {
     final AlignmentGeometry alignment = Alignment.center,
 
     /// How to paint any portions of the layout bounds not covered by the image.
-    final ImageRepeat repeat,
+    final ImageRepeat repeat = ImageRepeat.noRepeat, 
 
     /// The center slice for a nine-patch image.
     ///
